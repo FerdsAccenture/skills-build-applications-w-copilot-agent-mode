@@ -15,6 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+
+import os
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
@@ -26,6 +28,10 @@ router.register(r'users', UserViewSet)
 router.register(r'activities', ActivityViewSet)
 router.register(r'workouts', WorkoutViewSet)
 router.register(r'leaderboards', LeaderboardViewSet)
+
+# Dynamically build API base URL for codespace
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME', 'localhost')
+API_BASE_URL = f"https://{CODESPACE_NAME}-8000.app.github.dev/api/"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
