@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <circle cx="30" cy="30" r="28" fill="#23395d" stroke="#ffb347" stroke-width="4"/>
+  <text x="50%" y="50%" text-anchor="middle" dy="0.35em" font-size="24" fill="#ffb347" font-family="Arial, sans-serif">O</text>
+</svg>
